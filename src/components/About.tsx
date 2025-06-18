@@ -36,23 +36,23 @@ const About = () => {
           <div className="inline-block mb-2">
             <span className="cyber-chip">About Me</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold cyber-heading mb-4">Professional Profile</h2>
+          <h2 className="text-3xl md:text-4xl font-bold cyber-heading mb-4 text-border-blue">Professional Profile</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyber-blue to-cyber-neon mx-auto"></div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className={`cyber-card transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`cyber-card transition-all duration-700 bg-gradient-to-br from-cyber-blue/80 to-cyber-neon/60 border-2 border-white/10 shadow-xl ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="space-y-6">
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-border-highlight">
                 A passionate professional with expertise in cyber security and digital forensics. With a keen interest in data recovery and shell scripting, I combine technical knowledge with customer service excellence.
               </p>
               
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-border-highlight">
                 My experience spans from system administration and PHP development to digital forensics and cyber security research. I am proficient in Linux systems, constantly expanding my knowledge in cyber security techniques and methodologies.
               </p>
               
               <div className="pt-4">
-                <h3 className="text-xl font-mono font-semibold mb-3 text-cyber-blue">Key Highlights</h3>
+                <h3 className="text-xl font-mono font-semibold mb-3 text-cyber-blue text-border-neon">Key Highlights</h3>
                 <ul className="space-y-2">
                   {[
                     'Proficient in Linux systems administration',

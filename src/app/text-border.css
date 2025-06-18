@@ -1,0 +1,55 @@
+/* Utility for text border/highlight */
+.text-border-highlight {
+  color: #fff;
+  text-shadow:
+    0 0 2px #222,
+    0 0 4px #222,
+    0 0 6px #facc15,
+    0 0 8px #facc15;
+  /* fallback for strong highlight */
+}
+
+.text-border-blue {
+  color: #fff;
+  text-shadow:
+    0 0 2px #222,
+    0 0 4px #222,
+    0 0 6px #38bdf8,
+    0 0 8px #38bdf8;
+}
+
+.text-border-pink {
+  color: #fff;
+  text-shadow:
+    0 0 2px #222,
+    0 0 4px #222,
+    0 0 6px #f472b6,
+    0 0 8px #f472b6;
+}
+
+.text-border-neon {
+  color: #fff;
+  text-shadow:
+    0 0 2px #222,
+    0 0 4px #222,
+    0 0 6px #a3e635,
+    0 0 8px #a3e635;
+}
+
+.text-border-purple {
+  color: #fff;
+  text-shadow:
+    0 0 2px #222,
+    0 0 4px #222,
+    0 0 6px #a78bfa,
+    0 0 8px #a78bfa;
+}
+
+.text-border-yellow {
+  color: #fff;
+  text-shadow:
+    0 0 2px #222,
+    0 0 4px #222,
+    0 0 6px #fde047,
+    0 0 8px #fde047;
+}

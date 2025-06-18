@@ -81,7 +81,7 @@ const Experience = () => {
           <div className="inline-block mb-2">
             <span className="cyber-chip">Career Path</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold cyber-heading mb-4">Professional Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold cyber-heading mb-4 text-border-blue">Professional Experience</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyber-blue to-cyber-neon mx-auto"></div>
         </div>
         <div className="relative">
@@ -118,15 +118,15 @@ const Experience = () => {
                   {/* Content */}
                   <div className="pl-8 md:pl-12 md:w-1/2">
                     <div className={`cyber-card group hover:rotate-1 transition-all duration-500 bg-gradient-to-br ${index % 3 === 0 ? 'from-cyber-blue/80 to-cyber-neon/60' : index % 3 === 1 ? 'from-cyber-pink/80 to-cyber-yellow/60' : 'from-cyber-purple/80 to-cyber-blue/60'} border-2 border-white/10 shadow-xl`}> 
-                      <h3 className="text-xl font-bold mb-1 group-hover:text-cyber-blue transition-colors duration-300">
+                      <h3 className="text-xl font-bold mb-1 group-hover:text-cyber-blue transition-colors duration-300 text-border-yellow">
                         {exp.title}
                       </h3>
                       <div className="mb-4">
-                        <div className="flex items-center text-gray-100 mb-1 group-hover:text-cyber-purple-light/80 transition-colors duration-300">
+                        <div className="flex items-center text-gray-100 mb-1 group-hover:text-cyber-purple-light/80 transition-colors duration-300 text-border-purple">
                           <Briefcase className="w-4 h-4 mr-2 text-cyber-blue group-hover:scale-110 transition-transform duration-300" />
                           <span>{exp.company}</span>
                         </div>
-                        <div className="flex items-center text-gray-100 group-hover:text-cyber-pink/80 transition-colors duration-300">
+                        <div className="flex items-center text-gray-100 group-hover:text-cyber-pink/80 transition-colors duration-300 text-border-pink">
                           <MapPin className="w-4 h-4 mr-2 text-cyber-pink group-hover:scale-110 transition-transform duration-300" />
                           <span>{exp.location}</span>
                         </div>

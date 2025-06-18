@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./text-border.css";
 
 :root {
   --background: #ffffff;

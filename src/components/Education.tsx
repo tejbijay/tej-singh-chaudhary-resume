@@ -79,7 +79,7 @@ const Education = () => {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <div className="cyber-card group h-full hover:rotate-1 hover:scale-[1.02] transition-all duration-300">
+              <div className={`cyber-card group h-full hover:rotate-1 hover:scale-[1.02] transition-all duration-300 bg-gradient-to-br from-cyber-yellow/80 to-cyber-pink/60 border-2 border-white/10 shadow-xl`}>
                 <div className="flex items-start">
                   <div className="mr-4 p-2 rounded-full bg-cyber-dark border border-cyber-blue/30 group-hover:scale-110 transition-transform duration-500 group-hover:border-cyber-blue/70">
                     <GraduationCap className="w-5 h-5 text-cyber-blue" />

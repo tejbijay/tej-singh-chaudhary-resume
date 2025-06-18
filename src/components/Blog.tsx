@@ -83,7 +83,7 @@ const Blog = () => {
 					<div className="inline-block mb-2">
 						<span className="cyber-chip">Insights & Knowledge</span>
 					</div>
-					<h2 className="text-3xl md:text-4xl font-bold cyber-heading mb-4">Blog & Articles</h2>
+					<h2 className="text-3xl md:text-4xl font-bold cyber-heading mb-4 text-border-blue">Blog & Articles</h2>
 					<div className="w-20 h-1 bg-gradient-to-r from-cyber-blue to-cyber-neon mx-auto"></div>
 				</div>
 
@@ -96,7 +96,7 @@ const Blog = () => {
 							}`}
 						>
 							<Link to={`/blog/${post.slug}`} className="block h-full">
-								<div className="cyber-card hover:scale-[1.02] transition-all duration-300 h-full flex flex-col">
+								<div className={`cyber-card transition-all duration-700 bg-gradient-to-br from-cyber-pink/80 to-cyber-yellow/60 border-2 border-white/10 shadow-xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 									<div className="overflow-hidden rounded-lg mb-4 relative group">
 										<img
 											src={post.image}
@@ -113,9 +113,7 @@ const Blog = () => {
 									</div>
 
 									<div className="flex-1 flex flex-col">
-										<h3 className="text-xl font-bold mb-2 line-clamp-2 hover:text-cyber-blue transition-colors">
-											{post.title}
-										</h3>
+										<h3 className="text-xl font-bold text-border-yellow">{post.title}</h3>
 
 										<div className="flex items-center text-sm text-gray-400 mb-3 space-x-4">
 											<div className="flex items-center">
@@ -128,7 +126,7 @@ const Blog = () => {
 											</div>
 										</div>
 
-										<p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
+										<p className="text-gray-300 text-border-highlight">{post.excerpt}</p>
 
 										<div className="mt-auto flex items-center text-cyber-blue font-mono text-sm hover:text-cyber-purple transition-colors">
 											Read More <ArrowRight className="w-4 h-4 ml-1" />

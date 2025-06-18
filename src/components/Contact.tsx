@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Send, AtSign, MessageSquare, AlertCircle, CheckCircle } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
@@ -115,7 +114,7 @@ const Contact = () => {
           <div className="inline-block mb-2">
             <span className="cyber-chip">Get in Touch</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold cyber-heading mb-4">Contact Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold cyber-heading mb-4 text-border-blue">Contact Me</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyber-blue to-cyber-neon mx-auto"></div>
           <p className="text-gray-300 mt-6 max-w-2xl mx-auto">
             Have a project in mind or want to connect? Feel free to reach out using the form below
@@ -125,15 +124,11 @@ const Contact = () => {
         
         <div className="max-w-3xl mx-auto">
           <div 
-            className={`cyber-card transition-all duration-700 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+            className={`cyber-card transition-all duration-700 bg-gradient-to-br from-cyber-purple/80 to-cyber-blue/60 border-2 border-white/10 shadow-xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <label htmlFor="name" className="block font-mono text-sm">
-                  Name
-                </label>
+                <label className="block text-sm font-bold mb-2 text-border-yellow" htmlFor="name">Name</label>
                 <div className="relative">
                   <input
                     type="text"
@@ -155,9 +150,7 @@ const Contact = () => {
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="email" className="block font-mono text-sm">
-                  Email
-                </label>
+                <label className="block text-sm font-bold mb-2 text-border-yellow" htmlFor="email">Email</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <AtSign className="w-5 h-5 text-gray-500" />
@@ -182,9 +175,7 @@ const Contact = () => {
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="message" className="block font-mono text-sm">
-                  Message
-                </label>
+                <label className="block text-sm font-bold mb-2 text-border-yellow" htmlFor="message">Message</label>
                 <div className="relative">
                   <div className="absolute top-3 left-3 pointer-events-none">
                     <MessageSquare className="w-5 h-5 text-gray-500" />
