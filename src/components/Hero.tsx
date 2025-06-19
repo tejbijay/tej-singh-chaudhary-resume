@@ -75,15 +75,9 @@ const Hero = () => {
           />
         </div>
         
-        <h2 className="text-2xl font-orbitron mb-6 text-cyber-purple-light">Tej Singh Chaudhary</h2>
+        <h2 className="text-4xl md:text-6xl lg:text-8xl font-extrabold font-orbitron mb-6 bg-gradient-to-r from-cyber-blue via-cyber-neon to-cyber-pink text-transparent bg-clip-text drop-shadow-lg">Tej Singh Chaudhary</h2>
         
-        <div className="inline-block mb-4 py-1 px-3 border border-cyber-purple/30 rounded-full bg-cyber-dark/50 backdrop-blur-sm pulse-border">
-          <p className="text-sm font-orbitron text-cyber-purple-light animate-pulse">
-            Cyber Security & Digital Forensics
-          </p>
-        </div>
-        
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-orbitron tracking-tight">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 font-orbitron tracking-tight">
           <span className="block cyber-heading">Cyber Security</span>
           <span className="block mt-2">& Digital Forensics</span>
         </h1>
