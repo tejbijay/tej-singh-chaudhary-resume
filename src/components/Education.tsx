@@ -104,9 +104,9 @@ const Education = () => {
           ))}
         </div>
         
-        <div className="mt-16 cyber-card text-center hover:scale-[1.02] transition-all duration-500 bg-gradient-to-br from-cyber-blue/80 via-cyber-yellow/60 to-cyber-pink/70 border-2 border-cyber-yellow/80 shadow-2xl">
+        <div className="mt-16 cyber-card text-center hover:scale-[1.02] transition-all duration-500">
           <h3 className="text-xl font-bold mb-4 cyber-heading">Continuous Learning</h3>
-          <p className="text-gray-900 dark:text-gray-100 max-w-3xl mx-auto font-medium">
+          <p className="text-gray-300 max-w-3xl mx-auto">
             Always committed to expanding knowledge in cyber security, digital forensics, and information security systems through self-directed learning, online courses, and professional development.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
@@ -116,7 +116,7 @@ const Education = () => {
             ].map((topic, i) => (
               <span 
                 key={i} 
-                className="cyber-chip hover:rotate-3 transition-transform bg-cyber-dark/80 text-cyber-yellow border-cyber-yellow"
+                className="cyber-chip hover:rotate-3 transition-transform"
                 style={{animationDelay: `${i * 0.1}s`}}
               >
                 {topic}

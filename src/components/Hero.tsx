@@ -4,19 +4,28 @@ import { ChevronDown } from 'lucide-react';
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   
+  const getMouseColor = (x: number, y: number) => {
+    // Example: alternate between blue, yellow, pink, neon based on position
+    const colors = ['#38bdf8', '#fde047', '#f472b6', '#a3e635'];
+    const idx = Math.abs(Math.floor((x + y) * colors.length) % colors.length);
+    return colors[idx];
+  };
+
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-    
+
     const handleMouseMove = (e: MouseEvent) => {
       const { left, top, width, height } = container.getBoundingClientRect();
       const x = (e.clientX - left) / width - 0.5;
       const y = (e.clientY - top) / height - 0.5;
-      
       container.style.setProperty('--mouse-x', `${x * 20}px`);
       container.style.setProperty('--mouse-y', `${y * 20}px`);
+      // Set a CSS variable for mouse color
+      const color = getMouseColor(x, y);
+      container.style.setProperty('--mouse-cursor-color', color);
     };
-    
+
     window.addEventListener('mousemove', handleMouseMove);
     
     return () => {
@@ -71,13 +80,20 @@ const Hero = () => {
           <img 
             src="/photo.jpeg" 
             alt="Profile Photo" 
-            className="profile-image object-cover w-40 h-40 rounded-full mx-auto shadow-lg border-4 border-cyber-blue"
+            className="profile-image object-cover w-40 h-40 rounded-full mx-auto shadow-lg border-4"
+            style={{ borderColor: 'var(--mouse-cursor-color, #38bdf8)' }}
           />
         </div>
         
-        <h2 className="text-4xl md:text-6xl lg:text-8xl font-extrabold font-orbitron mb-6 bg-gradient-to-r from-cyber-blue via-cyber-neon to-cyber-pink text-transparent bg-clip-text drop-shadow-lg">Tej Singh Chaudhary</h2>
+        <h2 className="text-2xl font-orbitron mb-6 text-cyber-purple-light">Tej Singh Chaudhary</h2>
         
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 font-orbitron tracking-tight">
+        <div className="inline-block mb-4 py-1 px-3 border border-cyber-purple/30 rounded-full bg-cyber-dark/50 backdrop-blur-sm pulse-border">
+          <p className="text-sm font-orbitron text-cyber-purple-light animate-pulse">
+            Cyber Security & Digital Forensics
+          </p>
+        </div>
+        
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-orbitron tracking-tight">
           <span className="block cyber-heading">Cyber Security</span>
           <span className="block mt-2">& Digital Forensics</span>
         </h1>
