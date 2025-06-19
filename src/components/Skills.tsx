@@ -190,6 +190,27 @@ const Skills = () => {
             </div>
           ))}
         </div>
+        
+        {/* Technical Proficiencies Section */}
+        <div className="mt-16 transition-all duration-700 delay-500">
+          <div className="cyber-card text-center bg-gradient-to-br from-cyber-yellow/80 via-cyber-pink/40 to-cyber-blue/30 border-2 border-white/10 shadow-xl">
+            <h3 className="text-xl font-bold mb-4">Technical Proficiencies</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {/* Example proficiency items, add your own as needed */}
+              <div className="bg-cyber-dark/80 border border-cyber-blue/30 rounded-lg p-4 text-center w-full sm:w-auto min-w-[180px]">
+                <span className="font-mono font-bold text-cyber-blue">Linux</span>
+              </div>
+              <div className="bg-cyber-dark/80 border border-cyber-pink/30 rounded-lg p-4 text-center w-full sm:w-auto min-w-[180px]">
+                <span className="font-mono font-bold text-cyber-pink">Shell Scripting</span>
+              </div>
+              <div className="bg-cyber-dark/80 border border-cyber-yellow/30 rounded-lg p-4 text-center w-full sm:w-auto min-w-[180px]">
+                <span className="font-mono font-bold text-cyber-yellow">PHP</span>
+              </div>
+              {/* Add more as needed */}
+            </div>
+          </div>
+        </div>
+        
         <div 
           className={`mt-16 transition-all duration-700 delay-500 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'

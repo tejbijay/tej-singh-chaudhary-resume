@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { authService } from "./services/authService";
 import AnimatedBackground from "./components/AnimatedBackground";
+import AnimatedRocket from "./components/AnimatedRocket";
 
 // Page imports
 import Index from "./pages/Index";
@@ -42,6 +43,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <AnimatedBackground />
+      <AnimatedRocket />
       <TooltipProvider>
         <Toaster />
         <Sonner />

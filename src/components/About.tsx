@@ -77,58 +77,42 @@ const About = () => {
             </div>
           </div>
           
-          <div className={`relative transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="aspect-square rounded-lg overflow-hidden bg-cyber-dark border border-cyber-blue/30 relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyber-blue/5 to-cyber-purple/10"></div>
-              
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-                <div className="w-16 h-16 rounded-full bg-cyber-blue/10 border border-cyber-blue/30 mb-6 flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full bg-cyber-blue animate-pulse"></div>
-                </div>
-                
-                <h3 className="text-xl font-mono mb-4 cyber-heading">Technical Proficiencies</h3>
-                
-                <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
-                  {[
-                    {name: 'Digital Forensics', value: 90},
-                    {name: 'Linux Systems', value: 85},
-                    {name: 'Shell Scripting', value: 80},
-                    {name: 'Data Recovery', value: 88},
-                    {name: 'Cyber Security', value: 95},
-                    {name: 'PHP', value: 75},
-                    {name: 'Customer Service', value: 95}
-                  ].map((skill, index) => (
-                    <div key={index} className="space-y-1">
-                      <div className="flex justify-between text-xs text-gray-400">
-                        <span>{skill.name}</span>
-                        <span>{skill.value}%</span>
-                      </div>
-                      <div className="h-1 w-full bg-cyber-dark/50 rounded-full overflow-hidden">
-                        <div 
-                          className="h-full bg-gradient-to-r from-cyber-blue to-cyber-neon"
-                          style={{
-                            width: `${skill.value}%`,
-                            animation: `slide-in 1.5s cubic-bezier(0.4, 0, 0.2, 1)`,
-                            animationDelay: `${0.1 * index}s`,
-                            animationFillMode: 'backwards'
-                          }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+          <div className={`cyber-card transition-all duration-700 bg-gradient-to-br from-cyber-pink/80 to-cyber-yellow/60 border-2 border-white/10 shadow-xl ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div className="space-y-6">
+              <div className="w-16 h-16 rounded-full bg-cyber-blue/10 border border-cyber-blue/30 mb-6 flex items-center justify-center mx-auto">
+                <div className="w-8 h-8 rounded-full bg-cyber-blue animate-pulse"></div>
               </div>
-              
-              {/* Grid effect */}
-              <div className="absolute inset-0 bg-cyber-grid bg-[length:15px_15px] opacity-10 pointer-events-none"></div>
-              
-              {/* Scan line effect */}
-              <div className="scan-line"></div>
+              <h3 className="text-xl font-mono mb-4 cyber-heading text-border-yellow text-center">Technical Proficiencies</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 w-full max-w-2xl mx-auto">
+                {[
+                  {name: 'Digital Forensics', value: 90},
+                  {name: 'Linux Systems', value: 85},
+                  {name: 'Shell Scripting', value: 80},
+                  {name: 'Data Recovery', value: 88},
+                  {name: 'Cyber Security', value: 95},
+                  {name: 'PHP', value: 75},
+                  {name: 'Customer Service', value: 95}
+                ].map((skill, index) => (
+                  <div key={index} className="space-y-1">
+                    <div className="flex justify-between text-xs text-border-highlight font-bold">
+                      <span>{skill.name}</span>
+                      <span>{skill.value}%</span>
+                    </div>
+                    <div className="h-1 w-full bg-cyber-dark/50 rounded-full overflow-hidden">
+                      <div 
+                        className="h-full bg-gradient-to-r from-cyber-blue to-cyber-neon"
+                        style={{
+                          width: `${skill.value}%`,
+                          animation: `slide-in 1.5s cubic-bezier(0.4, 0, 0.2, 1)`,
+                          animationDelay: `${0.1 * index}s`,
+                          animationFillMode: 'backwards'
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-cyber-neon/5 rounded-full blur-3xl"></div>
-            <div className="absolute -top-4 -left-4 w-40 h-40 bg-cyber-blue/5 rounded-full blur-3xl"></div>
           </div>
         </div>
       </div>
